@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getElementByClassName</title>
+  </head>
+  <body>
+    <!-- Take 4 h2 tags with same class name, make different colour for each one -->
+    <h2 class="section-tag">Section-1 Red</h2>
+    <h2 class="section-tag">Section-2 Green</h2>
+    <h2 class="section-tag">Section-3 Blue</h2>
+    <h2 class="section-tag">Section-4 Yellow</h2>
+    <script>
+      const sections = document.getElementsByClassName("section-tag"); // Returns arrays of html collection
+      console.log(sections);
+      function colorSet(index, elements) {
+        if (index == 0) {
+          elements[index].style = "color:red";
+          console.log(elements[index]);
+        } else if (index == 1) {
+          elements[index].style = "color:green";
+        } else if (index == 2) {
+          elements[index].style = "color:blue";
+        } else if (index == 3) {
+          elements[index].style = "color:yellow";
+        }
+      }
+
+      for (let i = 0; i < sections.length; i++) {
+        colorSet(i, sections);
+      }
+    </script>
+  </body>
+</html>
